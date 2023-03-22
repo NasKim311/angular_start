@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   @Input() visible1: boolean = false;
-  @Output() sendMyEvent: EventEmitter<any> = new EventEmitter();
+  @Output() sendMyEvent: EventEmitter<boolean> = new EventEmitter();
   id: string = '';
   pwd: string = '';
   constructor() {}
