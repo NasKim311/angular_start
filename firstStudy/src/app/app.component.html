@@ -1,0 +1,10 @@
+<div *ngIf="visible">
+  <div>Wellocome</div>
+  <input type="text" placeholder="id" [(ngModel)]="id" />
+  <input type="text" placeholder="pasword" [(ngModel)]="pwd" />
+  <button (click)="tryToLogin()">Login</button>
+</div>
+
+<app-hello *ngIf="visible1"></app-hello>
+<br />
+<app-world *ngIf="visible2"></app-world>
