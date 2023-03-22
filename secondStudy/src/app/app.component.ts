@@ -10,7 +10,7 @@ export class AppComponent {
   boardBool = false;
 
   getEventThanks(event: boolean) {
-    alert(event);
+    console.log(event);
     if (event == true) {
       this.loginBool = false;
       this.boardBool = true;
