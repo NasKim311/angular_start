@@ -1,1 +1,20 @@
-<p>dashboard works!</p>
+<form [formGroup]="formGrp">
+  <input type="text" [value]="" formControlName="single_data" />
+  <div
+    formArrayName="row_data"
+    *ngFor="let item of rows.controls; let i = index"
+  >
+    <!-- formArray의 그룹 index값을 추가하여 item의 값을 찾을 수 있도록 한다. -->
+    <div [formGroupName]="i">
+      <span>{{ i + 1 }}</span>
+      <input type="text" formControlName="text" [value]="item.value.text" />
+      <input
+        type="number"
+        formControlName="number"
+        [value]="item.value.number"
+      />
+      <input type="button" value="보기" (click)="showData(item)" />
+    </div>
+  </div>
+</form>
+<input type="button" value="전부 보기" (click)="showData()" />
