@@ -2,6 +2,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 
+// 사용자가 만든 타입
+declare type MyCustomType = {
+  text: any;
+  number: any;
+};
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
